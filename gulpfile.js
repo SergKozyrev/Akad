@@ -21,7 +21,7 @@ let path = {
     src: {
         html: 'src/*.html',
         js: 'src/js/*.js',
-        style: 'src/sass/main.scss',
+        style: 'src/sass/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
