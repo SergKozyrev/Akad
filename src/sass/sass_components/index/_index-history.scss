@@ -1,0 +1,35 @@
+.history {
+    margin-top: -300px;
+
+    &__inner {
+        @include row-flex();
+        justify-content: space-between;
+    }
+
+    &__desc {
+        margin-bottom: 27px;
+    }
+
+    &__img {
+        @include col();
+        @include size(5);
+        @include size-md(12);
+
+
+    }
+
+    &__text {
+        @include col();
+        @include size(6);
+        @include size-md(12);
+        padding-top: 30px;
+
+        @include md-block {
+            text-align: center;
+        }
+    }
+
+    &__btn {
+        float: right;
+    }
+}

@@ -1,0 +1,24 @@
+.home-hero {
+    min-height: 850px;
+    padding-top: 225px;
+    width: 100%;
+    background: #fff url(../img/index-hero-bg.png) no-repeat;
+    background-size: cover;
+
+    &__text {
+        max-width: 555px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        border: 10px solid $title-color;
+        font-size: 48px;
+        line-height: 80px;
+    }
+
+    &__title_small {
+        padding: 5px 18px 3px;
+        background: $main-theme-color;
+    }
+}
