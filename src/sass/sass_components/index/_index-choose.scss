@@ -1,6 +1,7 @@
 .choose {
     text-align: center;
 
+
     &__desc {
         max-width: 715px;
         margin: 0 auto;
@@ -17,12 +18,19 @@
         @include size(6);
         @include size-md(12);
         justify-content: space-between;
-        
+
+        &__inner {
+            @include row-flex();
+            justify-content: space-between;
+        }
     }
 
     &-reason {
         text-align: left;
-
+        @include col();
+        @include size(6);
+        @include size-md(6);
+        @include size-xs(12);
         &__icon {
             color: $title-color;
             font-size: 36px;
