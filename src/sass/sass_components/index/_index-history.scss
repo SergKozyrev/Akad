@@ -1,6 +1,6 @@
 .history {
     margin-top: -300px;
-
+    margin-bottom: 150px;
     &__inner {
         @include row-flex();
         justify-content: space-between;
@@ -14,8 +14,6 @@
         @include col();
         @include size(5);
         @include size-md(12);
-
-
     }
 
     &__text {

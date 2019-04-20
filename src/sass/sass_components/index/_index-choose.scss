@@ -1,0 +1,56 @@
+.choose {
+    text-align: center;
+
+    &__desc {
+        max-width: 715px;
+        margin: 0 auto;
+        margin-bottom: 100px;
+    }
+}
+
+.features {
+    @include row-flex();
+    justify-content: space-between;
+
+    &-content {
+        @include col();
+        @include size(6);
+        @include size-md(12);
+        justify-content: space-between;
+        
+    }
+
+    &-reason {
+        text-align: left;
+
+        &__icon {
+            color: $title-color;
+            font-size: 36px;
+            line-height: 1;
+        }
+
+        &__title {
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        &__list {
+            color: $text-color;
+            font-family: $text-font, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1;
+            text-transform: uppercase;
+        }
+
+        &__item+&__item {
+            margin-top: 15px;
+        }
+    }
+
+    &-img {
+        @include col();
+        @include size(5);
+        @include size-md(12);
+    }
+}
