@@ -20,7 +20,7 @@ let gulp = require('gulp'),
 let path = {
     //Пути откуда брать исходники
     src: {
-        html: 'src/*.html',
+        html: 'src/html/*.html',
         js: 'src/js/*.js',
         style: 'src/sass/*.scss',
         img: 'src/img/**/*.*',
@@ -29,7 +29,7 @@ let path = {
 
     //Пути куда складывать готовые после сборки файлы
     build: {
-        html: 'build/',
+        html: './',
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
@@ -43,8 +43,7 @@ let path = {
         style: 'src/sass/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
-    },
-    root: './'
+    }
 };
 // Работа с шрифтами
 
@@ -95,7 +94,7 @@ function html() {
         .pipe(fileinclude({
             prefix: '@@'
         }))
-        .pipe(gulp.dest(path.root));
+        .pipe(gulp.dest(path.build.html));
 }
 
 // Работа со стилями
