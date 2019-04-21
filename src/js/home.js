@@ -6,7 +6,6 @@ var iso = new Isotope('.portfolio-content__list', {
 });
 
 var filterList = document.getElementsByClassName("portfolio-category__list")[0];
-
 filterList.addEventListener("click", function (e) {
     var target = e.target;
     if (!target.classList.contains("portfolio-category__item")) return;

@@ -16,7 +16,6 @@
 
         &__inner {
             @include row-flex();
-            justify-content: space-between;
         }
     }
 

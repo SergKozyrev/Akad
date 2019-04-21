@@ -23,8 +23,7 @@ let path = {
         js: 'src/js/*.js',
         style: 'src/sass/*.scss',
         img: 'src/img/**/*.*',
-        fonts: 'src/fonts/**/*.*',
-        css: 'build/css/*.css'
+        fonts: 'src/fonts/**/*.*'
     },
 
     //Пути куда складывать готовые после сборки файлы
@@ -106,14 +105,6 @@ function style() {
         .pipe(sass({
             outputStyle: 'expanded'
         }))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css));
-}
-// Минификация css
-
-function minify() {
-    return gulp.src(path.src.css)
-        .pipe(plumber())
         .pipe(shorthand())
         .pipe(autoprefixer({
             browsers: ['>0.1%']
@@ -122,6 +113,7 @@ function minify() {
         .pipe(cleanCSS({
             level: 2
         }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.css));
 }
 // Работа с скриптами
@@ -155,10 +147,9 @@ gulp.task("fonts", fonts); // Регистрация таска работы с 
 gulp.task("img", img); // Регистрация таска работы с изображениями
 gulp.task("html", html); // Регистрация таска работы с html
 gulp.task("style", style); // Регистрация таска работы со стилями
-gulp.task("minify", minify); // Минификация css
 gulp.task("script", script); // Регистрация таска работы с js 
 gulp.task("watch", watch); // Регистрация таска слежения за изменениями
 gulp.task("clean", clean); // Регистрация таска очистки папки
 
-gulp.task("build", gulp.series(clean, gulp.parallel(fonts, img, html, gulp.series(style, minify), script))); // Таск для сборки всего проекта
+gulp.task("build", gulp.series(clean, gulp.parallel(fonts, img, html, style, script))); // Таск для сборки всего проекта
 gulp.task("dev", gulp.series('build', 'watch')); // Таск при разработке

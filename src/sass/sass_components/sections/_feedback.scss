@@ -1,0 +1,51 @@
+.feedback {
+    background: $main-theme-color;
+
+    &__inner {
+        @include row-flex();
+        padding: 50px 0;
+    }
+
+    &__text {
+        @include col();
+        @include size(6);
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        color: #fff;
+        line-height: 40px;
+    }
+
+    &__message {
+        @include col();
+        @include size(6);
+        background: #fff;
+        padding: 20px 25px;
+    }
+}
+
+.feedback-message {
+    @include col();
+    @include size(6);
+    background: #fff;
+    padding: 20px 25px;
+
+    &__title {
+        margin-bottom: 18px;
+        line-height: 40px;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
