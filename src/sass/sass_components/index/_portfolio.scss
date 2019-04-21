@@ -1,0 +1,107 @@
+.portfolio {
+    text-align: center;
+
+    &__inner {
+        @include row-flex();
+        justify-content: space-between;
+    }
+
+    &-category {
+        @include col();
+        @include size(3);
+        @include size-md(12);
+
+        &__title {
+            text-align: left;
+            line-height: 48px;
+
+            &::after {
+                content: none;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__item {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: $title-color;
+            font-family: $title-font, sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            text-transform: uppercase;
+            transition: all .2s ease-in-out;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+
+        &__item--active {
+            padding: 0 10px;
+            color: #fff;
+            background: $main-theme-color;
+            margin-left: 0;
+        }
+    }
+
+    &-content {
+        @include col();
+        @include size(9);
+        @include size-md(12);
+        justify-content: space-between;
+
+        &__list {
+            @include row-flex();
+            justify-content: space-between;
+        }
+
+        &__item {
+            position: relative;
+            @include col();
+            @include size(4);
+            margin-bottom: 30px;
+            overflow: hidden;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+
+            &-info {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, .8);
+                transform: translateX(-100%);
+                z-index: 1;
+                transition: all .2s ease-in-out;
+            }
+
+            &-btn {
+                margin: auto;
+            }
+
+            &:hover &-info {
+                transform: translateX(0);
+            }
+        }
+    }
+
+
+
+
+}

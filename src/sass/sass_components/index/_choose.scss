@@ -1,12 +1,6 @@
 .choose {
+    margin-bottom: 150px;
     text-align: center;
-
-
-    &__desc {
-        max-width: 715px;
-        margin: 0 auto;
-        margin-bottom: 100px;
-    }
 }
 
 .features {
@@ -18,6 +12,7 @@
         @include size(6);
         @include size-md(12);
         justify-content: space-between;
+        padding-top: 20px;
 
         &__inner {
             @include row-flex();
@@ -31,7 +26,11 @@
         @include size(6);
         @include size-md(6);
         @include size-xs(12);
+        margin-bottom: 60px;
+
         &__icon {
+            display: inline-block;
+            margin-bottom: 5px;
             color: $title-color;
             font-size: 36px;
             line-height: 1;

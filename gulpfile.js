@@ -124,7 +124,7 @@ function style() {
 function script() {
     return gulp.src(path.src.js)
         .pipe(plumber())
-        .pipe(concat('main.js'))
+        // .pipe(concat('main.js'))
         .pipe(uglify({
             toplevel: true
         }))

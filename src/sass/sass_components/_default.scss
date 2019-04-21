@@ -13,12 +13,6 @@ body {
     line-height: 1;
 }
 
-img {
-    border: 0;
-    max-width: 100%;
-    height: auto;
-}
-
 a {
     text-decoration: none;
     color: $title-color;
@@ -52,7 +46,7 @@ a {
         z-index: -1;
     }
 
-    &_small {
+    &--small {
         font-size: 18px;
         line-height: 28px;
 
@@ -64,6 +58,8 @@ a {
 }
 
 .desc {
+    max-width: 715px;
+    margin: 0 auto 100px;
     color: $text-color;
     font-family: $text-font, sans-serif;
     font-size: 16px;
@@ -80,12 +76,12 @@ a {
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 
-    &_primary {
+    &--primary {
         background-color: $main-theme-color;
         color: #fff;
     }
 
-    &_secondary {
+    &--secondary {
         background-color: #fff;
         color: $main-theme-color;
     }

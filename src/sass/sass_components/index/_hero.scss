@@ -15,20 +15,21 @@
         border: 10px solid $title-color;
         font-size: 48px;
         line-height: 80px;
+        padding: 0px 29px;
 
         &::after {
             content: none;
         }
-    }
 
-    &__title_small {
-        padding: 5px 18px 3px;
-        background: $main-theme-color;
+        &--small {
+            padding: 2px 25px;
+            background: $main-theme-color;
+            margin-bottom: 0;
+            font-size: 14px;
 
-        &::after {
-            content: none;
+            &::after {
+                content: none;
+            }
         }
     }
-
-
 }
