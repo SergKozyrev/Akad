@@ -16,7 +16,6 @@
     "gulp-autoprefixer": "^6.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-clean-css": "^4.0.0",
-    "gulp-concat": "^2.6.1",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^5.0.3",
     "gulp-plumber": "^1.2.1",
