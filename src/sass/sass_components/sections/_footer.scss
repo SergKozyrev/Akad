@@ -1,0 +1,48 @@
+.footer {
+    padding: 50px 0;
+
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-menu__item {
+        position: relative;
+    }
+
+    &-menu__item:not(:last-child)::after {
+        content: "-";
+        position: absolute;
+        right: -20px;
+    }
+
+    &-menu__item+&-menu__item {
+        margin-left: 40px;
+    }
+
+    &-menu__link {
+        color: $text-color-light;
+        font-family: $text-font, sans-serif;
+        font-weight: 400;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: $main-theme-color;
+            opacity: 1;
+            -webkit-transition: .2s ease-in-out;
+            transition: .2s ease-in-out;
+        }
+
+        &:hover::before {
+            width: 50%;
+            top: 20px;
+            left: 0;
+        }
+    }
+}

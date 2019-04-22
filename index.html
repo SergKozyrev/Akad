@@ -222,9 +222,9 @@
                 <p class="desc feedback-message__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <form class="feedback-message__form" action="post">
-                    <div class="input-wrap">
-                        <input class="input input-wrap__email" type="email" name="email" id="email">
-                        <label class="input-wrap__placeholder" for="email">You email</label>
+                    <div class="fields-wrap">
+                        <input class="input fields-wrap__input" type="text" name="email" id="email" required> 
+                        <label class="fields-wrap__placeholder" for="email">You email</label>
                     </div>
                     <button class="btn btn--primary btn--form">Send</button>
                 </form>
@@ -237,7 +237,40 @@
     <!-- Header end -->
 
     <!-- Footer start -->
-    <footer class="page-footer"></footer>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <nav class="menu footer-menu">
+                <ul class="menu__list footer-menu__list">
+                    <li class="menu__item footer-menu__item"><a href="index.html"
+                            class="menu__link footer-menu__link">home</a></li>
+                    <li class="menu__item footer-menu__item"><a href="about.html"
+                            class="menu__link footer-menu__link">about us</a></li>
+                    <li class="menu__item footer-menu__item"><a href="services.html"
+                            class="menu__link footer-menu__link">services</a></li>
+                    <li class="menu__item footer-menu__item"><a href="portfolio.html"
+                            class="menu__link footer-menu__link">portfolio</a></li>
+                    <li class="menu__item footer-menu__item"><a href="blog.html"
+                            class="menu__link footer-menu__link">blog</a></li>
+                    <li class="menu__item footer-menu__item"><a href="contact.html"
+                            class="menu__link footer-menu__link">contact us</a></li>
+                </ul>
+            </nav>
+            <div class="footer__copyright">
+                <span class="created-by">Created by akhouad 2016. All Rights Reserved</span>
+                <ul class="social">
+                    <li class="social__item"><a href="#" class="social__link"><i class="icon ion-logo-facebook"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="icon ion-logo-twitter"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="icon ion-logo-youtube"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="icon ion-logo-linkedin"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="icon ion-logo-pinterest"></i></a></li>
+                    <li class="social__item"><a href="#" class="social__link"><i class="icon ion-logo-instagram"></i></a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</footer>
     <!-- Footer end -->
 
     <!-- Script -->
