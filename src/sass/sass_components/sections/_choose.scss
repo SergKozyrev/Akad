@@ -1,16 +1,18 @@
 .choose {
     margin-bottom: 150px;
     text-align: center;
+    @include md(margin-bottom, 90px);
 }
 
 .features {
     @include row-flex();
     justify-content: space-between;
+    @include md(justify-content, center);
 
     &-content {
         @include col();
         @include size(6);
-        @include size-md(12);
+        @include size-md(10);
         justify-content: space-between;
         padding-top: 20px;
 
@@ -23,9 +25,8 @@
         text-align: left;
         @include col();
         @include size(6);
-        @include size-md(6);
-        @include size-xs(12);
         margin-bottom: 60px;
+        @include md(text-align, center);
 
         &__icon {
             display: inline-block;
@@ -57,6 +58,6 @@
     &-img {
         @include col();
         @include size(5);
-        @include size-md(12);
+        @include md(display, none);
     }
 }

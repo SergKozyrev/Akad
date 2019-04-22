@@ -1,6 +1,7 @@
 .history {
     margin-top: -300px;
     margin-bottom: 150px;
+
     &__inner {
         @include row-flex();
         justify-content: space-between;
@@ -13,18 +14,14 @@
     &__img {
         @include col();
         @include size(5);
-        @include size-md(12);
+        @include size-md(6);
     }
 
     &__text {
         @include col();
         @include size(6);
-        @include size-md(12);
         padding-top: 30px;
-
-        @include md-block {
-            text-align: center;
-        }
+        @include md(padding-top, 0);
     }
 
     &__btn {

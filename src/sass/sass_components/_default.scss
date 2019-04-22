@@ -65,6 +65,7 @@ a {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+    @include md(margin-bottom, 25px);
 }
 
 .btn {
@@ -197,6 +198,8 @@ a {
 
 .social {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
     &__item+&__item {
         margin-left: 20px;
