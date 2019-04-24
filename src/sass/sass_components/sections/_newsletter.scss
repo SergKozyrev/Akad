@@ -1,4 +1,4 @@
-.feedback {
+.newsletter {
     background: $main-theme-color;
 
     &__inner {
@@ -20,7 +20,7 @@
     }
 }
 
-.feedback-message {
+.newsletter-message {
     @include col();
     @include size(6);
     @include size-md(10);

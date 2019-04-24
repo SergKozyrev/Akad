@@ -5,23 +5,29 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include sm(justify-content, center);
     }
 
-    &-menu__item {
+}
+
+.footer-menu {
+    @include sm(margin-bottom, 30px);
+
+    &__item {
         position: relative;
     }
 
-    &-menu__item:not(:last-child)::after {
+    &__item:not(:last-child)::after {
         content: "-";
         position: absolute;
         right: -20px;
     }
 
-    &-menu__item+&-menu__item {
+    &__item+&__item {
         margin-left: 40px;
     }
 
-    &-menu__link {
+    &__link {
         color: $text-color-light;
         font-family: $text-font, sans-serif;
         font-weight: 400;

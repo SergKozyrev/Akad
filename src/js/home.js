@@ -15,6 +15,7 @@ var iso = new Isotope('.portfolio-content__list', {
 });
 
 var filterList = document.getElementsByClassName("portfolio-category__list")[0];
+
 filterList.addEventListener("click", function (e) {
     var target = e.target;
     if (!target.classList.contains("portfolio-category__item")) return;
@@ -27,4 +28,11 @@ filterList.addEventListener("click", function (e) {
     });
 
     target.classList.add("portfolio-category__item--active");
+});
+
+var menuBtn = document.querySelector(".open-menu");
+var menu = document.querySelector(".header-menu__list");
+menuBtn.addEventListener("click", function () {
+    this.classList.toggle("open-menu--active");
+    menu.classList.toggle("header-menu__list--active");
 });

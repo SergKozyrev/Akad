@@ -31,6 +31,11 @@
                 justify-content: center;
             }
 
+            @include sm-block() {
+                flex-direction: column;
+                align-items: center;
+            }
+
         }
 
         &__item {
@@ -43,6 +48,8 @@
             line-height: 20px;
             text-transform: uppercase;
             transition: all .2s ease-in-out;
+            @include md(margin-left, 0);
+            @include sm(margin-left, 0);
 
             &:hover {
                 cursor: pointer;
@@ -50,11 +57,18 @@
 
         }
 
+        &__item+&__item {
+
+            @include md(margin-left, 20px);
+            @include sm(margin-left, 0);
+        }
+
         &__item--active {
             padding: 0 10px;
             color: #fff;
             background: $main-theme-color;
             margin-left: 0;
+            @include md(margin-left, 0);
         }
     }
 
@@ -73,6 +87,7 @@
             position: relative;
             @include col();
             @include size(4);
+            @include size-sm(12);
             margin-bottom: 30px;
             overflow: hidden;
 
@@ -107,8 +122,4 @@
             }
         }
     }
-
-
-
-
 }

@@ -11,6 +11,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 41px 0;
+
+        @include sm-block() {
+            position: relative;
+        }
     }
 
     &-logo {
@@ -21,5 +25,36 @@
         line-height: 1;
         text-transform: uppercase;
     }
+}
 
+.header-menu {
+
+    &__list {
+        @include sm-block() {
+
+            display: block;
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            padding: 0 15px;
+            background: $main-theme-color;
+            text-align: center;
+            z-index: 2;
+            transition: right .25s ease-in-out;
+        }
+
+        &--active {
+            @include sm-block() {
+                right: 0;
+            }
+        }
+    }
+
+    &__item+&__item {
+        @include sm-block() {
+            margin-left: 0;
+        }
+    }
 }
