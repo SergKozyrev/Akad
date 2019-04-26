@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     imagemin = require('gulp-imagemin'), // Минификация изображений
     imageminPngquant = require('imagemin-pngquant'), // Минификация png
     imageminJpegRecompress = require('imagemin-jpeg-recompress'), // Минификация jpeg
-    fileinclude = require('gulp-file-include'), // Импорт html файлов
+    include = require('gulp-include'),// Импорт файлов
     sass = require('gulp-sass'), // Компилятор sass
     sourcemaps = require('gulp-sourcemaps'), // Карта стилей
     autoprefixer = require('gulp-autoprefixer'), // Расстановка префиксов
@@ -90,9 +90,7 @@ function img() {
 function html() {
     return gulp.src(path.src.html)
         .pipe(plumber())
-        .pipe(fileinclude({
-            prefix: '@@'
-        }))
+        .pipe(include())
         .pipe(gulp.dest(path.build.html));
 }
 
@@ -121,6 +119,7 @@ function style() {
 function script() {
     return gulp.src(path.src.js)
         .pipe(plumber())
+        .pipe(include())
         .pipe(uglify({
             toplevel: true
         }))
