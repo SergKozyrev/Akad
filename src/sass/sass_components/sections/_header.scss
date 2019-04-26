@@ -36,6 +36,10 @@
             background: #fdfdfd;
             text-align: center;
             z-index: 2;
+
+            &--dark {
+                background: #c9d1d9;
+            }
         }
 
         &--active {

@@ -15,6 +15,7 @@
         &__title {
             text-align: left;
             line-height: 48px;
+            @include md(font-size, 25px);
 
             &::after {
                 content: none;

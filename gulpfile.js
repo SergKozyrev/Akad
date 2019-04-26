@@ -101,8 +101,8 @@ function style() {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
-            outputStyle: 'expanded'
-        }))
+            outputStyle: 'compressed'
+        })).on('error', sass.logError)
         .pipe(shorthand())
         .pipe(autoprefixer({
             browsers: ['>0.1%']
