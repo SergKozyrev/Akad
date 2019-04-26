@@ -107,14 +107,13 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 background: rgba(255, 255, 255, .8);
                 transform: translateX(-100%);
                 z-index: 1;
                 transition: all .3s ease-in-out;
-            }
-
-            &-btn {
-                margin: auto;
             }
 
             &:hover &-info {

@@ -11,10 +11,6 @@
         justify-content: space-between;
         align-items: center;
         padding: 41px 0;
-
-        @include sm-block() {
-            position: relative;
-        }
     }
 
     &-logo {
@@ -31,30 +27,34 @@
 
     &__list {
         @include sm-block() {
-
-            display: block;
-            position: fixed;
-            top: 0;
-            right: -50%;
-            width: 50%;
-            height: 100%;
-            padding: 0 15px;
-            background: $main-theme-color;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            display: none;
+            width: 100%;
+            padding-bottom: 20px;
+            background: #fdfdfd;
             text-align: center;
             z-index: 2;
-            transition: right .25s ease-in-out;
         }
 
         &--active {
             @include sm-block() {
-                right: 0;
+                display: block;
             }
+        }
+    }
+
+    &__item {
+        @include sm-block() {
+            margin-left: 0;
         }
     }
 
     &__item+&__item {
         @include sm-block() {
             margin-left: 0;
+            margin-top: 15px;
         }
     }
 }

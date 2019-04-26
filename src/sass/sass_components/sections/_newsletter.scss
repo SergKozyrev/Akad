@@ -24,8 +24,11 @@
     @include col();
     @include size(6);
     @include size-md(10);
+    @include size-sm(12);
     background: #fff;
     padding: 20px 25px;
+
+    @include sm(padding, 10px 15px);
 
     &__title {
         margin-bottom: 18px;
@@ -38,6 +41,7 @@
 
     &__desc {
         margin-bottom: 30px;
+        @include sm(text-align, justify);
     }
 
     &__form {

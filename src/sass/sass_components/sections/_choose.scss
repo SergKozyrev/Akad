@@ -1,7 +1,7 @@
 .choose {
-    margin-bottom: 150px;
+    margin-bottom: 90px;
     text-align: center;
-    @include md(margin-bottom, 90px);
+    @include md(margin-bottom, 120px);
 }
 
 .features {

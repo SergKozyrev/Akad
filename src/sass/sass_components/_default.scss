@@ -7,6 +7,7 @@
 }
 
 body {
+    background: #fff;
     font-family: $text-font;
     color: $text-color;
     font-size: 16px;
@@ -58,6 +59,7 @@ a {
 }
 
 .desc {
+    width: 100%;
     max-width: 715px;
     margin: 0 auto 100px;
     color: $text-color;
@@ -90,6 +92,7 @@ a {
     &--form {
         padding: 17px 48px;
         border: none;
+        @include sm(width, 100%);
 
         &:hover {
             cursor: pointer;
@@ -236,6 +239,7 @@ a {
 .fields-wrap {
     position: relative;
     flex: 1 1 auto;
+    @include sm(margin-bottom, 10px);
 
     &__input {
         width: 100%;
@@ -303,4 +307,5 @@ a {
     font-size: 14px;
     line-height: 1;
     text-transform: uppercase;
+    @include sm(text-transform, none);
 }

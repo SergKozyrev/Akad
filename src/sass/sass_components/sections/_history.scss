@@ -1,6 +1,7 @@
 .history {
     margin-top: -300px;
     margin-bottom: 150px;
+    @include xs(margin-top, 0);
 
     &__inner {
         @include row-flex();
@@ -10,6 +11,7 @@
     &__desc {
         margin-bottom: 27px;
         @include sm(margin, 0 0 25px 0);
+        @include sm(text-align, justify);
     }
 
     &__img {
@@ -30,7 +32,6 @@
         @include size-sm(12);
         padding-top: 30px;
         @include md(padding-top, 0);
-        @include sm(text-align, justify);
     }
 
     &__btn {
