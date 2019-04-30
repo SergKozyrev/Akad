@@ -1,2 +1,2 @@
 # Akad
-https://sergkozyrev.github.io/Akad/
+https://sergkozyrev.github.io/Akad/build/
