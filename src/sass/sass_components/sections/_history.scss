@@ -7,9 +7,12 @@
         @include row-flex();
         justify-content: space-between;
     }
-
+    &__title{
+        margin-bottom: 15px;
+    }
     &__desc {
-        margin-bottom: 27px;
+        line-height: 30px;
+        margin-bottom: 25px;
         @include sm(margin, 0 0 25px 0);
         @include sm(text-align, justify);
     }
