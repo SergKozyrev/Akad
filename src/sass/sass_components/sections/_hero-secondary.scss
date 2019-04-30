@@ -1,0 +1,26 @@
+
+.secondary-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    width: 100%;
+    margin-bottom: 150px;
+    background: #dee3e7 url(../img/hero-second-bg.png) no-repeat;
+    background-size: cover;
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        font-size: 36px;
+
+        &::after {
+            content: none;
+        }
+    }
+}

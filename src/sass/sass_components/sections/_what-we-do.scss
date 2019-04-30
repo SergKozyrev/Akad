@@ -1,0 +1,13 @@
+.what-we-do {
+    width: calc(50% - 30px);
+    @include sm(width, 100%);
+
+    &__title {
+        display: block;
+    }
+
+    &__desc {
+        text-align: justify;
+        margin-bottom: 0;
+    }
+}

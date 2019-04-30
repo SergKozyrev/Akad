@@ -1,0 +1,64 @@
+
+.primary-hero {
+    min-height: 850px;
+    padding: 225px 15px 0;
+    width: 100%;
+    background: #fff url(../img/hero-primary-bg.png) no-repeat;
+    background-size: cover;
+
+    @include xs-block() {
+        min-height: 650px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        max-width: 555px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__title {
+        border: 10px solid $title-color;
+        font-size: 48px;
+        line-height: 80px;
+        padding: 0px 29px;
+
+        @media screen and (max-width: 585px) {
+            border: 5px solid #60606e;
+            font-size: 25px;
+            line-height: 50px;
+            padding: 0px 20px;
+        }
+
+        @media screen and (max-width: 320px) {
+            border: 5px solid #60606e;
+            font-size: 20px;
+            line-height: 50px;
+            padding: 0px 20px;
+        }
+
+        &::after {
+            content: none;
+        }
+
+        &--small {
+            padding: 2px 25px;
+            background: $main-theme-color;
+            margin-bottom: 0;
+            font-size: 14px;
+
+            &::after {
+                content: none;
+            }
+        }
+    }
+
+    &__desc {
+        @media screen and (max-width: 585px) {
+            max-width: 300px;
+        }
+    }
+}

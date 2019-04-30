@@ -4,7 +4,7 @@ let gulp = require('gulp'),
     imagemin = require('gulp-imagemin'), // Минификация изображений
     imageminPngquant = require('imagemin-pngquant'), // Минификация png
     imageminJpegRecompress = require('imagemin-jpeg-recompress'), // Минификация jpeg
-    include = require('gulp-include'),// Импорт файлов
+    include = require('gulp-include'), // Импорт файлов
     sass = require('gulp-sass'), // Компилятор sass
     sourcemaps = require('gulp-sourcemaps'), // Карта стилей
     autoprefixer = require('gulp-autoprefixer'), // Расстановка префиксов
@@ -28,7 +28,7 @@ let path = {
 
     //Пути куда складывать готовые после сборки файлы
     build: {
-        html: './',
+        html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
@@ -42,7 +42,8 @@ let path = {
         style: 'src/sass/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
-    }
+    },
+    root: 'build'
 };
 // Работа с шрифтами
 
@@ -139,7 +140,7 @@ function watch() {
 // Очистка папки
 
 function clean() {
-    return del(['build/*', 'index.html']);
+    return del(path.root);
 }
 
 gulp.task("fonts", fonts); // Регистрация таска работы с шрифтами

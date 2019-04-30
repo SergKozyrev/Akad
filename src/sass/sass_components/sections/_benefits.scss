@@ -1,0 +1,42 @@
+.benefits {
+    margin-bottom: 90px;
+    text-align: center;
+
+    &__list {
+        @include row-flex();
+    }
+
+    &__item {
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+        margin-bottom: 60px;
+        @include sm(margin-bottom, 30px);
+        text-align: justify;
+
+        &-title {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        &-icon {
+            display: inline-block;
+            background-color: $main-theme-color;
+            height: 40px;
+            width: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            margin-right: 20px;
+        }
+
+        &-desc {
+            font-size: 14px;
+            line-height: 30px;
+            margin-bottom: 0;
+        }
+    }
+}
