@@ -2,6 +2,12 @@
     margin-bottom: 90px;
     text-align: center;
 
+    &__desc {
+        @include sm-block() {
+            margin-bottom: 50px;
+        }
+    }
+
     &__list {
         @include row-flex();
     }
@@ -37,6 +43,10 @@
             font-size: 14px;
             line-height: 30px;
             margin-bottom: 0;
+
+            @include sm-block() {
+                margin: 0 0 30px 0;
+            }
         }
     }
 }

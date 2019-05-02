@@ -1,0 +1,22 @@
+.clients {
+    @include col();
+    @include size(6);
+    @include size-md(12);
+
+    &__list {
+        @include row-flex();
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        padding: 10px 20px;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        @include col();
+        @include size(4);
+        @include size-md(6);
+        @include size-sm(12);
+    }
+}

@@ -1,0 +1,84 @@
+.team {
+    margin-bottom: 150px;
+    text-align: center;
+
+    &__list {
+        @include row-flex();
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__member {
+        @include col();
+        @include size(3);
+        @include size-md(6);
+        @include size-sm(12);
+        margin-bottom: 30px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        &-info {
+            display: flex;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(255, 255, 255, .8);
+            transform: translateX(-100%);
+            z-index: 1;
+            transition: all .3s ease-in-out;
+        }
+
+        &:hover &-info {
+            transform: translateX(0);
+        }
+
+        &-name {
+            margin-bottom: 10px;
+            font-family: $title-font, sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            color: $title-color;
+            text-transform: uppercase;
+        }
+
+        &-job {
+            display: inline-block;
+            background-color: $main-theme-color;
+            padding: 5px;
+            font-family: $title-font, sans-serif;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: white;
+        }
+    }
+
+    &__read {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+        background: #efeff0;
+        &-text{
+            @include sm-block(){
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

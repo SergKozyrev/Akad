@@ -16,11 +16,9 @@
 
 .footer-menu {
     margin-bottom: 30px;
-    &__list {
-        @include sm-block() {
-            flex-direction: column;
-            align-items: center;
-        }
+
+    @include sm-block() {
+        display: none;
     }
 
     &__item {
@@ -31,19 +29,10 @@
         content: "-";
         position: absolute;
         right: -20px;
-
-        @include sm-block() {
-            content: none;
-        }
     }
 
     &__item+&__item {
         margin-left: 40px;
-
-        @include sm-block() {
-            margin-left: 0;
-            margin-top: 15px;
-        }
     }
 
     &__link {

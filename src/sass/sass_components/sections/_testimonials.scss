@@ -1,0 +1,50 @@
+.testimonials {
+    @include col();
+    @include size(6);
+    @include size-md(12);
+
+    @include sm-block() {
+        margin-bottom: 30px;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__author-img {
+        width: 82px;
+        height: 82px;
+        margin-bottom: 30px;
+        border-radius: 50%;
+    }
+
+    &__blockquot {
+        margin-bottom: 30px;
+
+        &::before {
+            content: "\201c";
+            margin-right: 5px;
+            font-size: 25px;
+        }
+
+        &::after {
+            content: "\201d";
+            font-size: 25px;
+        }
+    }
+
+    &__author-name {
+        display: inline-block;
+        padding: 10px;
+        background: $main-theme-color;
+        color: #ffffff;
+        font-family: $title-font, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
