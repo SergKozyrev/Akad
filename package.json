@@ -10,6 +10,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-pngquant": "^7.0.0",
+    "node-pre-gyp": "^0.13.0",
     "npm": "^6.9.0"
   },
   "devDependencies": {
@@ -22,7 +23,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "smart-grid": "^2.1.2"
   }
 }
