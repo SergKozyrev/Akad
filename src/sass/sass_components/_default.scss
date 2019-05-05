@@ -307,6 +307,29 @@ a {
     }
 }
 
+.list {
+    text-align: left;
+
+    &__item {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 20px;
+        color: $text-color;
+        font-family: $text-font;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+
+        &::before {
+            font-family: "Ionicons";
+            content: '\f2b9';
+            position: absolute;
+            left: 0;
+            color: $main-theme-color;
+        }
+    }
+}
+
 .social {
     display: flex;
     flex-wrap: wrap;
