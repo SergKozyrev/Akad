@@ -1,0 +1,12 @@
+.blog-main {
+    &__content {
+        @include col();
+        @include size(8);
+        @include size-md(12);
+    }
+
+    &__aside {
+        @include col();
+        @include size(3);
+    }
+}
