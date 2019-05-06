@@ -1,5 +1,7 @@
 .post {
-    margin-bottom: 100px;
+    &:not(:last-child) {
+        margin-bottom: 100px;
+    }
 
     &__media {
         margin-bottom: 30px;

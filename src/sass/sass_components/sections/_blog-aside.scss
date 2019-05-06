@@ -1,0 +1,122 @@
+.blog-form {
+    display: flex;
+    margin-bottom: 50px;
+
+    &__input {
+        height: 100%;
+        width: -webkit-calc(100% - 40px);
+        width: calc(100% - 40px);
+        border: 0;
+        background-color: #ececec;
+        padding: 12px 20px;
+        font-family: $title-font, sans-serif;
+        font-size: 12px;
+        color: $text-color;
+        text-transform: uppercase;
+
+        &:focus {
+            outline: none;
+            background: #f2f2f2;
+        }
+    }
+
+    &__btn {
+        padding: 9px 10px;
+        border: 0;
+        background-color: #ececec;
+        color: $text-color;
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.blog-history {
+    &__title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    &__tabs-header {
+        display: flex;
+        border-bottom: solid 2px #e6e6e6;
+    }
+
+    &__tabs-btn {
+        position: relative;
+        padding: 10px 12px;
+        color: #999999;
+        font-family: $title-font, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 2px;
+            top: 100%;
+            right: 0;
+            background: $main-theme-color;
+            transition: all .2s ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: $title-color;
+
+            &::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        &--active {
+            color: $title-color;
+
+            &::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &__tab-content {
+        display: none;
+        padding-top: 30px;
+        &--active{
+            display: block;
+        }
+    }
+}
+
+.post-mini {
+    display: flex;
+    margin-bottom: 10px;
+
+    &__img {
+        max-width: 70px;
+        margin-right: 12px;
+        flex: 0 0 auto;
+    }
+
+    &__info {
+        padding-top: 5px;
+    }
+
+    &__title {
+        margin-bottom: 8px;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    &__date {
+        font-size: 12px;
+    }
+}

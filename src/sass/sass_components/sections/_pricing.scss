@@ -5,6 +5,11 @@
     &__inner {
         @include row-flex();
         flex-wrap: wrap;
+
+        @include md-block() {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 }
 
@@ -16,14 +21,14 @@
 
     @include md-block() {
         margin-bottom: 50px;
+        max-width: 360px;
     }
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 35px;
-    border-top: 3px solid $main-theme-color;
-    border-bottom: 3px solid $main-theme-color;
+    border: 3px solid $main-theme-color;
     transition: all .2s ease-in-out;
 
     &::after {
