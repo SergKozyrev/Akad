@@ -6,6 +6,7 @@
 .services-content {
     @include row-flex();
     margin-bottom: 50px;
+    justify-content: center;
 
     &__inner {
         @include col();
@@ -30,7 +31,6 @@
 
         @include md-block() {
             max-width: none;
-            text-align: center;
         }
     }
 
@@ -40,8 +40,7 @@
         }
     }
 
-    &__list1 {
-        @include col();
+    &__list {
         columns: 2;
 
         @include md-block() {
