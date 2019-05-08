@@ -1,13 +1,11 @@
 .blog {
     &__posts {
-        @include col();
-        @include size(8);
-        @include size-md(12);
+        width: calc(66.66667% - 30px);
+        @include md(width, 100%);
     }
 
     &__aside {
-        @include col();
-        @include size(3);
+        width: calc(25% - 30px);
         @include md(display, none);
     }
 }

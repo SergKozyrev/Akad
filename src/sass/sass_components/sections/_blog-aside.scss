@@ -36,6 +36,8 @@
 }
 
 .blog-history {
+    margin-bottom: 50px;
+
     &__title {
         font-size: 14px;
         margin-bottom: 20px;
@@ -90,7 +92,8 @@
     &__tab-content {
         display: none;
         padding-top: 30px;
-        &--active{
+
+        &--active {
             display: block;
         }
     }
@@ -118,5 +121,100 @@
 
     &__date {
         font-size: 12px;
+    }
+}
+
+.blog-category {
+    margin-bottom: 50px;
+
+    &__title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+
+        &:first-child {
+            border-top: solid 1px #bfbfbf;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: solid 1px #bfbfbf;
+        font-family: $text-font, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            border-bottom: solid 1px $main-theme-color;
+        }
+    }
+}
+
+.blog-tags {
+    margin-bottom: 50px;
+
+    &__title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    &__link {
+        display: inline-block;
+        padding: 10px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+        background-color: #e5e5e5;
+        color: #999999;
+        font-family: $title-font, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            background: #f2f2f2;
+        }
+    }
+}
+
+.blog-archives {
+    margin-bottom: 50px;
+
+    &__title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+
+        &:first-child {
+            border-top: solid 1px #bfbfbf;
+        }
+    }
+
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        border-bottom: solid 1px #bfbfbf;
+        font-family: $text-font, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        transition: all .2s ease-in-out;
+
+        &:hover {
+            border-bottom: solid 1px $main-theme-color;
+        }
     }
 }
