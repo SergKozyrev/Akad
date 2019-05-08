@@ -60,16 +60,26 @@
         @include size-md(12);
         margin-bottom: 30px;
 
+        @include sm-block {
+            margin-bottom: 30px;
+        }
+
         &--textarea {
             @include col();
             @include size(12);
             margin-bottom: 30px;
             height: 200px;
+
+            @include sm-block {
+                margin-bottom: 30px;
+            }
         }
     }
 
     &__placeholder--textarea {
         top: 20px;
+
+
     }
 
     &__btn {
@@ -92,7 +102,7 @@
     }
 
     &__item {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     &__link {
