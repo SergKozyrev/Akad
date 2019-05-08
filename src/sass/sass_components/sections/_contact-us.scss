@@ -1,0 +1,113 @@
+.contact-us {
+    margin-bottom: 150px;
+
+    &__inner {
+        @include row-flex();
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__content {
+        @include col();
+        @include size(6);
+        @include size-md(12);
+
+        @include md-block() {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__map-wrapper {
+        overflow: hidden;
+        padding-top: 60%;
+        position: relative;
+        height: 0;
+        @include col();
+        @include size(6);
+        @include size-md(12);
+
+        &:hover .contact-us__map-overlay {
+            transform: translateY(-100%);
+        }
+    }
+
+    &__map {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+
+    &__map-overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, .7);
+        transition: all .2s ease-in-out;
+    }
+
+    &__form {
+        @include row-flex();
+        margin-bottom: 50px;
+    }
+
+    &__fields-wrap {
+        @include col();
+        @include size(6);
+        @include size-md(12);
+        margin-bottom: 30px;
+
+        &--textarea {
+            @include col();
+            @include size(12);
+            margin-bottom: 30px;
+            height: 200px;
+        }
+    }
+
+    &__placeholder--textarea {
+        top: 20px;
+    }
+
+    &__btn {
+        margin: 0 15px;
+    }
+
+    &__info-title {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    &__info-desc {
+        max-width: none;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    &__list {
+        margin-bottom: 30px;
+    }
+
+    &__item {
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        transition: .2s ease-in-out;
+
+        &:hover {
+            color: $main-theme-color;
+        }
+    }
+
+    &__social {
+        justify-content: flex-start;
+
+        @include sm-block {
+            justify-content: flex-start;
+        }
+    }
+}
